@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>iPhone 17 Pro Max Camera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Header Dynamic Island -->
+        <div class="header">
+            <div class="dynamic-island">
+                <div class="island-cam"></div>
+                <div class="island-status" id="recording-dot"></div>
+            </div>
+            <div class="top-controls">
+                <button class="icon-btn" id="flash-toggle">⚡</button>
+                <button class="icon-btn" id="hdr-toggle">HDR</button>
+                <button class="icon-btn" id="ratio-toggle">4:3</button>
+                <button class="icon-btn" id="grid-toggle">🌐</button>
+            </div>
+        </div>
+
+        <!-- Viewport Utama Kamera -->
+        <div class="viewport-container" id="viewport">
+            <video id="camera-feed" autoplay playsinline muted></video>
+            <canvas id="canvas-output"></canvas>
+            
+            <div class="grid-overlay" id="grid">
+                <div class="grid-box"></div><div class="grid-box"></div><div class="grid-box"></div>
+                <div class="grid-box"></div><div class="grid-box"></div><div class="grid-box"></div>
+                <div class="grid-box"></div><div class="grid-box"></div><div class="grid-box"></div>
+            </div>
+
+            <div class="focus-ring" id="focus-ring"></div>
+        </div>
+
+        <!-- Kontrol Bawah -->
+        <div class="controls-area">
+            <!-- Selector Zoom -->
+            <div class="zoom-selector">
+                <button class="zoom-btn" data-zoom="0.5">.5</button>
+                <button class="zoom-btn active" data-zoom="1">1x</button>
+                <button class="zoom-btn" data-zoom="2">2</button>
+                <button class="zoom-btn" data-zoom="5">5x</button>
+            </div>
+
+            <!-- Mode Kamera Carousel -->
+            <div class="mode-carousel">
+                <div class="mode-item" data-mode="cinematic">CINEMATIC</div>
+                <div class="mode-item" data-mode="video">VIDEO</div>
+                <div class="mode-item active" data-mode="photo">PHOTO</div>
+                <div class="mode-item" data-mode="portrait">PORTRAIT</div>
+                <div class="mode-item" data-mode="night">NIGHT</div>
+            </div>
+
+            <!-- Shutter Controls -->
+            <div class="shutter-bar">
+                <div class="gallery-preview" id="gallery-btn">🖼️</div>
+                <div class="shutter-btn-container">
+                    <div class="shutter-btn-outer"></div>
+                    <div class="shutter-btn-inner" id="shutter-btn"></div>
+                </div>
+                <button class="icon-btn" id="switch-camera-btn">🔄</button>
+            </div>
+
+            <!-- Cari bagian .top-controls di index.html, lalu sesuaikan seperti ini: -->
+<!-- Cari bagian .top-controls di index.html, lalu sesuaikan seperti ini: -->
+<!-- Top Controls dengan Pemilih Grafik & FPS Tinggi -->
+<div class="top-controls">
+    <button class="icon-btn" id="flash-toggle">⚡</button>
+    <button class="icon-btn" id="hdr-toggle">HDR</button>
+    
+    <!-- Controls Badge Grafik & FPS -->
+    <div class="specs-badge">
+        <button id="res-toggle-btn" class="spec-btn">4K</button>
+        <span class="dot-separator">•</span>
+        <button id="fps-toggle-btn" class="spec-btn">60 FPS</button>
+    </div>
+
+    <button class="icon-btn" id="ratio-toggle">4:3</button>
+    <button class="icon-btn" id="grid-toggle">🌐</button>
+</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
